@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gõ Cửa Phố Phường</title>
+    <link rel="stylesheet" href="./css/infor-city.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <!-- <header>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Contacts</a>
+            <a href="">Info</a>
+        </nav>
+    </header> -->
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <a href="./search-infor-city.html"><img src="./images/banner-map-1.webp"></a>
+                
+            </div>
+            <div class="item">
+                <a href="./search-infor-city.html"><img src="./images/banner-map-2.jpg"></a>
+                
+            </div>
+            <div class="item">
+                <a href="./search-infor-city.html"><img src="./images/banner-map-3.jpg"></a>
+                
+            </div>
+            <div class="item">
+                <a href="./search-infor-city.html"><img src="./images/banner-map-4.jpg"></a>
+                
+            </div>
+            <div class="item">
+                <a href="./search-infor-city.html"><img src="./images/banner-map-5.jpg"></a>
+                
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <!-- <div class="thumbnail">
+            <div class="item">
+                <img src="./images/banner-map-1.webp">
+                <div class="content">
+                    <div class="title">
+                        Số 10
+                    </div>
+                    <div class="description">
+                        Nhà cổ
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/banner-map-2.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/banner-map-3.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/banner-map-4.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/banner-map-5.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+    
+        <div class="row" style="height: 15vh;">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+              <ul class="nav" style="padding: 20px 5px;">
+                <li class="nav-item">
+                  <div class="user-items pl-8">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                        <a href="#" class="volume-button">
+                          <audio id="background-music" loop autoplay>
+                            <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <button id="toggle-icon" class="nav-item__bt fa-solid fa-volume-high"></button>
+                        </a>
+                      <!-- </li> -->
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="user-items pl-8">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                        <a href="#" class="volume-button">
+                          <audio id="background-music" loop autoplay>
+                            <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <button id="toggle-icon" class="nav-item__bt fas fa-cloud" style="background-color: #ceb1c0; box-shadow: 0px 2px #ceb1c0;"></button>
+                        </a>
+                      <!-- </li> -->
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="user-items pl-8">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                        <a href="#" class="volume-button">
+                          <audio id="background-music" loop autoplay>
+                            <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <button id="toggle-icon" class="nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button>
+                        </a>
+                      <!-- </li> -->
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="user-items pl-8">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                        <a href="#" class="volume-button">
+                          <audio id="background-music" loop autoplay>
+                            <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <button id="toggle-icon" class="nav-item__bt fas fa-play" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button>
+                        </a>
+                      <!-- </li> -->
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+              
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+              <ul class="nav" style="position: absolute; padding: 20px 5px; right: 1%;">
+                <li class="nav-item">
+                  <div class="user-items pl-8">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                        <a href="#" class="volume-button">
+                          <audio id="background-music" loop autoplay>
+                            <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <button id="toggle-icon" class="nav-item__bt fa-solid fas fa-plus" style="padding: 8px 10px;"></button>
+                        </a>
+                      <!-- </li> -->
+                    </ul>
+                  </div>
+                </li>
+                
+                
+                <li class="nav-item">
+                  <div class="user-items pl-8">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                        <a href="#" class="volume-button">
+                          <audio id="background-music" loop autoplay>
+                            <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <button id="toggle-icon" class="nav-item__bt fas fa-window-minimize" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 8px;"></button>
+                        </a>
+                      <!-- </li> -->
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+    <!-- list thumnail -->
+    <div class="carousel" style="height: 40vh; background-color: #e8d5b9; margin-top: 0;">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4">
+                <div class="content ">
+                    <div class="topic" style="font-size: 1.4rem; color: #58574b;">PHỐ MÃ MÂY</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Phố Hàng Bạc, xưa là phường nghề đúc bạc, được coi là giàu có bậc nhất ở Kinh thành Thăng Long. Trải qua nhiều thế kỷ với những biến động thời gian, nhưng phố Hàng Bạc vẫn giữ được nhiều nét kiến trúc, nếp sống làng nghề xưa. Nhìn từ góc
+        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8">
+                <div class="thumbnail ">
+                    <div class="item">
+                        <img src="./images/banner-map-1.webp">
+                        <div class="content">
+                            <div class="title">
+                                Số 10
+                            </div>
+                            <div class="description">
+                                Nhà cổ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner-map-2.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Số 10
+                            </div>
+                            <div class="description">
+                                Nhà cổ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner-map-3.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Số 10
+                            </div>
+                            <div class="description">
+                                Nhà cổ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner-map-4.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Số 10
+                            </div>
+                            <div class="description">
+                                Nhà cổ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner-map-5.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Số 10
+                            </div>
+                            <div class="description">
+                                Nhà cổ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>

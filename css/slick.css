@@ -1,0 +1,77 @@
+.slider{
+    /* width: 100%; */
+    width: 900px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+  }
+  .slider .list img {
+    width: 900px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: contain;
+    /* flex-basis: inherit; */
+    justify-content: center;
+  }
+  .slider .buttons{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background-color: #e2e2e2;
+    color: #58574b;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  .slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #1b1a1a;
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    /* background-color: rgba(104, 104, 104, 0.333); */
+    background-color: rgb(128 106 80);
+    margin: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  .slider .dots li.active{
+    /* width: 30px; */
+    background-color:rgb(103 154 143);
+  }
+  @media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+    }
+  }
