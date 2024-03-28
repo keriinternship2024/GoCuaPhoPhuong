@@ -1,0 +1,50 @@
+.popupvideo{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    -webkit-transition: .3s;
+}
+.popupvideo.active{
+    opacity: 1;
+    visibility: visible;
+}
+.popupvideo__inner{
+    width: 80%;
+    height: 80%;
+    max-width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    position: absolute;
+}
+.popupvideo__inner-iframe{
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    top: 50%;
+    left: 50%;
+    border: 5px solid #fff;
+}
+.popupvideo__inner-close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    border-radius: 25%;
+    cursor: pointer;
+    background-color: #bea67c;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}

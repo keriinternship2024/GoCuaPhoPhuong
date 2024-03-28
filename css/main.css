@@ -20,7 +20,7 @@ span{
     display: flex;
     align-items: center;
     margin: 0px 8px;
-    background-color: var(--white-color);
+    /* background-color: var(--white-color); */
 }
 .header__mobile-search {
     padding: 0px 12px;
@@ -186,6 +186,10 @@ span{
     display: block;
 }
 /* navbar */
+.navbar{
+    border-bottom: 3px solid #b7b6a2;
+    bottom: -16px;
+}
 .nav-link{
     font-size: 1.2rem;
 }
@@ -194,6 +198,7 @@ span{
     /* color: rgb(178, 153, 125); */
     padding-right: 3rem;
     margin-top: 1rem;
+    text-align: end;
 }
 .navbar-nav {
     padding-right: 3rem;

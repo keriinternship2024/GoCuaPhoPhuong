@@ -88,3 +88,36 @@ function showSlider(type){
     //     next.click();
     // }, timeAutoNext)
 }
+
+
+// Modal video
+function handleModalVideo(){
+    let videos = document.querySelectorAll('.nav__item-btn--play');
+    let modalVideo = document.querySelector('.popupvideo');
+    let iframeModalVideo = document.querySelector('.popupvideoo .popupvideo__inner .popupvideo__inner-iframe');
+    let btnClose = document.querySelector('.popupvideo .popupvideo__inner .popupvideo__inner .popupvideo__inner-iframe .popupvideo__inner-close');
+
+    videos.forEach(function (video) {
+        video.addEventListener('click', function(){
+            // show modal
+            modalVideo.classList.add('active');
+            // Get Data ID
+            let dataID = video.getAttribute('data-video-src');
+            // Set ID iframe
+            iframeModalVideo.setAttribute('src', `https://www.youtube.com/embed/${dataID}?autoplay=1`);
+        })
+    });
+    function closeModal(){
+        // Hide modal
+        modalVideo.classList.remove('active');
+        // Empty Src Iframe
+        iframeModalVideo.setAttribute('src', '');
+    }
+    btnClose.addEventListener('click', function(){
+        closeModal();
+    })
+    modalVideo.addEventListener('click', function(){
+        closeModal();
+    });
+}
+handleModalVideo();
