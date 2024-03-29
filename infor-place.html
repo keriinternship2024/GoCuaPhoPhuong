@@ -171,7 +171,7 @@
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
                       <a href="#" class="volume-button">
                         <audio id="background-music" loop autoplay>
-                          <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
+                          <source src="" type="audio/mp3">
                           Your browser does not support the audio element.
                       </audio>
               
@@ -185,14 +185,8 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <a href="#" class="volume-button">
-                        <audio id="background-music" loop autoplay>
-                          <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
-                          Your browser does not support the audio element.
-                      </audio>
-              
+                      
                       <button id="toggle-icon" class="nav-item__bt fas fa-cloud" style="background-color: #ceb1c0; box-shadow: 0px 2px #ceb1c0;"></button>
-                      </a>
                     <!-- </li> -->
                   </ul>
                 </div>
@@ -201,14 +195,8 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <a href="#" class="volume-button">
-                        <audio id="background-music" loop autoplay>
-                          <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
-                          Your browser does not support the audio element.
-                      </audio>
-              
-                      <button id="toggle-icon" class="nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button>
-                      </a>
+                      
+                      <button id="toggle-icon" class="nav__item-btn--play nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button>
                     <!-- </li> -->
                   </ul>
                 </div>
@@ -217,7 +205,7 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <button id="toggle-icon" class="nav-item__bt nav__item-btn--play fas fa-play" data-video-src="kiO_O4Yzvgc" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button>
+                      <button id="toggle-icon" class="nav__item-btn--play nav-item__bt  fas fa-play" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button>
                     <!-- </li> -->
                   </ul>
                 </div>
@@ -234,13 +222,48 @@
     <div class="popupvideo">
       <div class="popupvideo__inner">
         <div class="popupvideo__inner-iframe">
-          <iframe width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="100%" height="100%" style="position: absolute;" src="https://www.youtube.com/embed/FWqT8BxWhfg?si=_JwiiYVzQWXox9c4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <div class="popupvideo__inner-close">
             <i class="fas fa-times"></i> 
           </div>
         </div>
       </div>
     </div>    
+<!-- popupvideo -->
+<script>
+  // Modal video
+function handleModalVideo(){
+    let videos = document.querySelectorAll('.nav__item-btn--play');
+    let modalVideo = document.querySelector('.popupvideo');
+    let iframeModalVideo = document.querySelector('.popupvideoo .popupvideo__inner .popupvideo__inner-iframe');
+    let btnClose = document.querySelector('.popupvideo .popupvideo__inner .popupvideo__inner-iframe .popupvideo__inner-close');
+
+    videos.forEach(function (video) {
+        video.addEventListener('click', function(){
+            // show modal
+            modalVideo.classList.add('active');
+            // Get Data ID
+            // let dataID = video.getAttribute('data-video-src');
+            // console.log(dataID)
+            // Set ID iframe
+            iframeModalVideo.setAttribute('src','https://www.youtube.com/embed/FWqT8BxWhfg?si=_JwiiYVzQWXox9c4');
+        })
+    });
+    function closeModal(){
+        // Hide modal
+        modalVideo.classList.remove('active');
+        // Empty Src Iframe
+        iframeModalVideo.setAttribute('src', '');
+    }
+    btnClose.addEventListener('click', function(){
+        closeModal();
+    })
+    modalVideo.addEventListener('click', function(){
+        closeModal();
+    });
+}
+handleModalVideo();
+</script>
 
 
   <!-- Slideshow Banner -->
@@ -301,7 +324,7 @@
 
 </script>
 <!-- // script music -->
-<!-- <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
     var music = document.getElementById("background-music");
     var iconButton = document.getElementById("toggle-icon");
@@ -318,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-  </script> -->
+  </script>
 
   <!-- script voice search -->
 <script>

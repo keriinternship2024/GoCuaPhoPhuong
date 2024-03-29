@@ -15,6 +15,12 @@ span{
     font-weight: 600;
 }
 /* header */
+body{
+    background-color: #f2ece2 !important;
+}
+#header{
+    background-color: #f2ece2 !important;
+}
 .header-with-search {
     height: var(--header-with-search-height);
     display: flex;
