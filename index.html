@@ -30,15 +30,15 @@
   tabindex="0">
 
   <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 ">
       <div class="container-fluid">
         <ul class="navbar-translate">
-          <li class="nav-item">VIETNAM</li>
-          <li class="nav-item">ENGLISH</li>
-          <li class="nav-item">CHINA</li>
+          <a href=""><li class="nav-item">VIETNAM</li></a>
+          <a href=""><li class="nav-item">ENGLISH</li></a>
+          <a href=""><li class="nav-item">CHINA</li></a>
         </ul>
         <a class="navbar-brand" href="index.html">
-          <img src="images/main-logo.png" class="logo">
+          <img src="./images/logo.png" class="logo" style="width: 200px; margin-left: -35px;">
         </a>
         <button class="navbar-toggler fas fa-bars d-flex d-lg-none order-3 p-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <svg class="navbar-icon fas fa-bars"> -->
@@ -70,13 +70,12 @@
                        
                   </a>                 
               </div> -->
-
               <input type="checkbox" hidden="" id="mobile-search-checkbox" class="header__search-checkbox">
               <div class="header__search">
                   <div class=" header__search-input-wrap">
-                      <input type="text" id="search-input" class=" header__search-input" placeholder="Search">
+                      <!-- <input type="text" id="search-input" class=" header__search-input" placeholder="Search"> -->
                       <!-- Search history -->
-                      <div class="header__search-history">
+                      <!-- <div class="header__search-history">
                           <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                           <ul class="header__search-history-list">
                               <li class="header__search-history-item">
@@ -89,7 +88,16 @@
                                   <a href="">Phố Hàng Bè</a>
                               </li>
                           </ul>
-                      </div>
+                      </div> -->
+                      
+                        <form autocomplete="off" class=" header__search-input">
+                          <div>
+                            <input type="text" id="input" class=" header__search-input" placeholder="Typa a name here...">
+                          </div>
+                          <ul class="list">
+          
+                          </ul>
+                        </form>
                   </div>
                   <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
                     <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
@@ -122,7 +130,7 @@
     </nav>
   </header>
 
-  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px; position: absolute; top: -24px;">
     <!-- Slideshow banner  -->
     <div class="slider">
       <div class="slides">
@@ -245,118 +253,9 @@
 
   </div>
 
-  <div style="height: 200px;"></div>
+  
 
-  <footer id="footer" class="overflow-hidden">
-    <div class="container">
-      <div class="row">
-        <div class="footer-top-area">
-          <div class="row d-flex flex-wrap justify-content-between">
-            <div class="col-lg-3 col-sm-6 pb-3">
-              <div class="footer-menu">
-                <img src="images/main-logo.png" alt="logo">
-                <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio
-                  erat nullam fringilla.</p>
-                <div class="social-links">
-                  <ul class="d-flex list-unstyled">
-                    <li>
-                      <a href="#">
-                        <svg class="facebook">
-                          <use xlink:href="#facebook" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <svg class="instagram">
-                          <use xlink:href="#instagram" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <svg class="twitter">
-                          <use xlink:href="#twitter" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <svg class="linkedin">
-                          <use xlink:href="#linkedin" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <svg class="youtube">
-                          <use xlink:href="#youtube" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-6 pb-3">
-              <div class="footer-menu text-uppercase">
-                <h5 class="widget-title pb-2">Quick Links</h5>
-                <ul class="menu-list list-unstyled text-uppercase">
-                  <li class="menu-item pb-2">
-                    <a href="#">Home</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">About</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Shop</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Blogs</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 pb-3">
-              <div class="footer-menu text-uppercase">
-                <h5 class="widget-title pb-2">Help & Info Help</h5>
-                <ul class="menu-list list-unstyled">
-                  <li class="menu-item pb-2">
-                    <a href="#">Track Your Order</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Returns Policies</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Shipping + Delivery</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Contact Us</a>
-                  </li>
-                  <li class="menu-item pb-2">
-                    <a href="#">Faqs</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 pb-3">
-              <div class="footer-menu contact-item">
-                <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
-                <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
-                </p>
-                <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-  </footer>
+  
 
   <!-- Slideshow Banner -->
   <!-- <script type="text/javascript">
@@ -433,18 +332,84 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-  </script>
+</script>
+<!-- search -->
+<script>
+  let citys = [
+    "Phố Hàng Bạc ",
+    "Phố Hàng Mây",
+    "Phố Hàng Bông",
+    "Phố Hàng Bè",
+    "Phố Hàng Giấy",
+    "Phố Đồng Lạc",
+    "Phố Lãn Ông",
+    "Phố Nguyễn Du",
+    "Phố Hàng Đường",
+    "Phố Hàng Mành",
+    "Phố Hàng Hòm",
+    "Phố Hàng Gà",
+    "Phố Hàng Đồng",
+    "Phố Hàng Bồ"
+
+  ];
+  // Sort citys in ascending order
+  let sortedCitys = citys.sort();
+
+  // reference to
+  let input = document.getElementById("input");
+
+  // Excute function on keyup
+  input.addEventListener("keyup",(e) =>{
+    // loop through above array
+    // Initially remove al elements ( so if user erases a letter or adds new letter then clean previous output)
+    removeElements();
+    for (let i of sortedCitys) {
+      // convert input to lowercase and compare with each string
+      
+      if(i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+      input.value != ""
+      ){
+        // create li element
+        let listItem = document.createElement("li");
+        // One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayCitys('" + i + "')");
+        // Display matched part in bold
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        // display the value in array 
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+        
+      }
+    }
+  })
+  function displayCitys(value){
+    input.value = value;
+    removeElements();
+  }
+  function removeElements(){
+    // clear all the item
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+      item.remove();
+    });
+  }
+  
+
+</script>
 
   <!-- script voice search -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const searchInput = document.getElementById("search-input");
+    const searchInput = document.getElementById("input");
     const voiceSearchButton = document.getElementById("voice-search-button");
 
     function startSpeechRecognition() {
         const recognition = new webkitSpeechRecognition(); // Sử dụng webkitSpeechRecognition cho trình duyệt Chrome
-        recognition.lang = "en-US";
-
+        recognition.lang = "vi-VN";
+        
         recognition.onresult = function(event) {
             const result = event.results[0][0].transcript;
             searchInput.value = result;

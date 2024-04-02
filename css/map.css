@@ -3,6 +3,9 @@
     margin-top: -21rem;
 
 }
+.offcanvas-backdrop{
+    background-color: #fff;
+}
 .header__search-menu{
     display: flex;
     margin: 0 5px;
@@ -31,8 +34,8 @@
     margin-right: 3px;
 }
 .offcanvas-m152{
-    margin-top: 152px;
-    margin-bottom: 152px;
+    margin-top: 124px;
+    margin-bottom: 124px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 16px;
@@ -68,4 +71,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        font-size: 12px;
+        text-align: center;
 }
+.maker{
+    display: none ;
+}
+.active{
+    display: block;
+}
+/* .active {
+    background-color: blue;
+    color: white;
+} */

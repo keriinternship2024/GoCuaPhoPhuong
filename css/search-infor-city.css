@@ -52,3 +52,40 @@
 .offcanvas-backdrop.show {
     opacity: -0.5;
 }
+
+/* Maker */
+.wrapper {
+  display: flex;
+}
+
+.stick {
+  height: 100px;
+  width: 10px;
+  background: #D2AC67;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}   
+
+.flag {
+  /* width: 120px; */
+  /* height: 66px; */
+  background-color: #D2AC67;
+  position: relative;
+  padding: 4px 6px;
+  border: none !important;
+  border-radius: 20px;
+  box-shadow: none !important;
+}
+.flag::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  /* right: 1px; */
+  top: 28px;
+  /* bottom: -51px; */
+  left: 6px;
+  border-width: 18px 10px;
+  border-style: solid;
+  border-color: #d2ac67 transparent transparent transparent;
+}

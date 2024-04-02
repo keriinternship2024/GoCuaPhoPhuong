@@ -11,7 +11,7 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="stylesheet" href="./css/map.css">
+
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/map.css">
   <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
   <link rel="stylesheet" href="./fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
  
@@ -31,15 +32,15 @@
   tabindex="0">
 
   <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 ">
       <div class="container-fluid">
         <ul class="navbar-translate">
-          <li class="nav-item">VIETNAM</li>
-          <li class="nav-item">ENGLISH</li>
-          <li class="nav-item">CHINA</li>
+          <a href="" ><li class="nav-item">VIETNAM</li></a>
+          <a href=""><li class="nav-item">ENGLISH</li></a>
+          <a href=""><li class="nav-item">CHINA</li></a>
         </ul>
         <a class="navbar-brand" href="index.html">
-          <img src="images/main-logo.png" class="logo">
+          <img  src="./images/logo.png" class="logo" style="width: 200px; margin-left: -35px;">
         </a>
         <button class="navbar-toggler fas fa-bars d-flex d-lg-none order-3 p-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <svg class="navbar-icon fas fa-bars"> -->
@@ -56,11 +57,12 @@
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav  justify-content-end align-items-center flex-grow-1 ">
               <li class="nav-item">
-                <a class="nav-link me-4 active" href="#billboard">Tham quan phố phường</a>
+                <a class="nav-link me-4 active" href="#billboard">Tham quan phố phường </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link me-4" href="#company-services">Về chúng tôi</a>
               </li>
+
               <div class="header-with-search">
                 <label for="mobile-search-checkbox" class="header__mobile-search">
                   <i class="header__mobile-search-icon fas fa-search" style="color: #b7b7b7;"></i>
@@ -71,26 +73,34 @@
                        
                   </a>                 
               </div> -->
-
               <input type="checkbox" hidden="" id="mobile-search-checkbox" class="header__search-checkbox">
               <div class="header__search">
                   <div class=" header__search-input-wrap">
-                      <input type="text" id="search-input" class=" header__search-input" placeholder="Search">
+                      <!-- <input type="text" id="search-input" class=" header__search-input" placeholder="Search"> -->
                       <!-- Search history -->
-                      <div class="header__search-history">
+                      <!-- <div class="header__search-history">
                           <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                           <ul class="header__search-history-list">
                               <li class="header__search-history-item">
-                                  <a href="">Phố <span></span> Mã Mây</a>
+                                  <a href="">Phố Mã Mây</a>
                               </li>
                               <li class="header__search-history-item">
-                                  <a href="">Phố <span></span> Hàng Mã</a>
+                                  <a href="">Phố Hàng Mã</a>
                               </li>
                               <li class="header__search-history-item">
                                   <a href="">Phố Hàng Bè</a>
                               </li>
                           </ul>
-                      </div>
+                      </div> -->
+                      
+                        <form autocomplete="off" class=" header__search-input">
+                          <div>
+                            <input type="text" id="input" class=" header__search-input" placeholder="Typa a name here...">
+                          </div>
+                          <ul class="list">
+          
+                          </ul>
+                        </form>
                   </div>
                   <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
                     <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
@@ -123,7 +133,7 @@
     </nav>
   </header>
 
-  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px; position: absolute; top: -24px;">
     <!-- Slideshow banner  -->
     <div class="slider">
       <div class="slides">
@@ -134,16 +144,34 @@
         <!-- radio buttons end -->
         <!-- slide image start -->
         <div class="slide first">
-          <img src="./images/map.jpg" alt="Gõ Cửa Phố Phường">
+          <img onclick="closebtn()" src="./images/map.jpg" alt="Gõ Cửa Phố Phường">
         </div>
 
         
       </div>
+      <!-- Maker Start -->
+      <div class="maker" id="marker">
+        <div class="box updown-animation" style="top: 180px; left: 500px; position: absolute;">
+          <div class="wrapper">
+            <div class="flag">
+              <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Phố Mã Mây</p>
+            </div>
+          </div>
+        </div>
+        <div class="box updown-animation" style="top: 340px; left: 750px; position: absolute;">
+          <div class="wrapper">
+            <div class="flag">
+              <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Phố Mã Mây</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="menu">
         <a class=" btn btn-primary btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
             <i class="fas fa-bars"></i>
           </a>
-          <div class="offcanvas offcanvas-start offcanvas-m152" style="opacity: 0.85;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas offcanvas-start offcanvas-m152" style="opacity: 0.95;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
               <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
               <a class=" btn btn-primary btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -168,6 +196,7 @@
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
                 <button class="header__search-btn--menu">
                     <i class="header__search-btn-icon fas fa-search"></i>
@@ -178,48 +207,48 @@
             <div class="offcanvas-body" >
               <div style="display: flex;">
                 <ul class="list-place">
-                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" >Phố <span>Mã Mây</span>
+                  <li id="myButton" onclick="clickbtn()" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Mã Mây</span>
                     
                   </li>
                   <li  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Mã</span>
                     
                   </li>
                   <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Mắm</span> </li>
-                  <li>Phố <span>Hàng Bè</span> </li>
-                  <li>Phố <span>Hàng Bồ</span> </li>
-                  <li>Phố <span>Hàng Giấy</span> </li>
-                  <li>Phố <span>Đồng Lạc</span> </li>
-                  <li>Phố <span>Hàng Đào</span> </li>
-                  <li>Phố <span>Hàng Chiếu</span> </li>
-                  <li>Phố <span>Lãn Ông</span> </li>
-                  <li>Phố <span>Nguyễn Du</span> </li>
-                  <li>Phố <span>Hàng Đường</span> </li>
-                  <li>Phố <span>Hàng Mành</span> </li>
-                  <li>Phố <span>Hàng Hòm</span> </li>
-                  <li>Phố <span> Hàng Gà</span></li>
-                  <li>Phố <span>Hàng Đồng</span> </li>
-                  <li>Phố <span>Mã Mây</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Bè</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Bồ</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Giấy</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Đồng Lạc</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Đào</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Chiếu</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Lãn Ông</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Nguyễn Du</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Đường</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Mành</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Hòm</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span> Hàng Gà</span></li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Đồng</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Mã Mây</span> </li>
                   
                 </ul>
                 
                 <ul class="list-place">
-                  <li>Phố <span>Hàng Nón</span> </li>
-                  <li>Phố <span>Hàng Vai</span> </li>
-                  <li>Phố <span>Hàng Lược</span> </li>
-                  <li>Phố <span>Hàng Bông</span> </li>
-                  <li>Phố <span>Lò Sũ</span> </li>
-                  <li>Phố <span>Nguyễn Hữu Nhân</span> </li>
-                  <li>Phố <span>Hàng Tre</span> </li>
-                  <li>Phố <span>Hàng Vôi</span> </li>
-                  <li>Phố <span>Nguyễn Du</span> </li>
-                  <li>Phố <span>Hàng Đường</span> </li>
-                  <li>Phố <span>Hàng Mành</span> </li>
-                  <li>Phố <span>Hàng Hòm</span> </li>
-                  <li>Phố <span>Hàng Gà</span> </li>
-                  <li>Phố <span>Hàng Đồng</span> </li>
-                  <li>Phố <span>Hàng Nón</span> </li>
-                  <li>Phố <span>Nguyễn Du</span> </li>
-                  <li>Phố <span>Hàng Đường</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Nón</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Vai</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Lược</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Bông</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Lò Sũ</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Nguyễn Hữu Nhân</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Tre</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Vôi</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Nguyễn Du</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Đường</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Mành</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Hòm</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Gà</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Đồng</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Nón</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Nguyễn Du</span> </li>
+                  <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Hàng Đường</span> </li>
                 </ul>
               </div>
               <!-- <div class="dropdown mt-3">
@@ -260,23 +289,108 @@
 
   
 
-  <!-- Modal -->
+<!-- Maker -->
+<!-- <script>
+  let maker = document.getElementsByClassName("maker");
+  let place__makers = document.getElementsByClassName("place__maker");
+  function showMaker(){
+        maker.classList.add('active')
+    }
+    for(const place__maker of place__makers) {
+        place__maker.addEventListener('click', showMaker);
+
+    }
+</script> -->
+
+<script>
+  // Lấy tham chiếu đến modal và nút
+ 
+  // var span = document.getElementsByClassName("close")[0];
+
+  // Khi người dùng nhấp vào nút, hiển thị modal
+ function clickbtn() {
+  var marker = document.getElementById("marker").style.display='block';
+     
+  }
+
+  function closebtn() {
+  var marker = document.getElementById("marker").style.display='none';
+     
+  }
+
+  // Khi người dùng nhấp vào bất kỳ đâu bên ngoài modal, đóng modal
+ 
+</script>
 
 
+ 
+<!-- search -->
+<script>
+  let citys = [
+    "Phố Hàng Bạc ",
+    "Phố Hàng Mây",
+    "Phố Hàng Bông",
+    "Phố Hàng Bè",
+    "Phố Hàng Giấy",
+    "Phố Đồng Lạc",
+    "Phố Lãn Ông",
+    "Phố Nguyễn Du",
+    "Phố Hàng Đường",
+    "Phố Hàng Mành",
+    "Phố Hàng Hòm",
+    "Phố Hàng Gà",
+    "Phố Hàng Đồng",
+    "Phố Hàng Bồ"
 
-  <!-- Slideshow Banner -->
-  <!-- <script type="text/javascript">
-    var counter = 1;
-    setInterval(function () {
-      document.getElementById('radio' + counter).checked = true;
-      counter++;
-      if (counter > 3) {
-        counter = 1;
+  ];
+  // Sort citys in ascending order
+  let sortedCitys = citys.sort();
+
+  // reference to
+  let input = document.getElementById("input");
+
+  // Excute function on keyup
+  input.addEventListener("keyup",(e) =>{
+    // loop through above array
+    // Initially remove al elements ( so if user erases a letter or adds new letter then clean previous output)
+    removeElements();
+    for (let i of sortedCitys) {
+      // convert input to lowercase and compare with each string
+      
+      if(i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+      input.value != ""
+      ){
+        // create li element
+        let listItem = document.createElement("li");
+        // One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayCitys('" + i + "')");
+        // Display matched part in bold
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        // display the value in array 
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+        
       }
-    }, 3000); 
-  </script> -->
-  <!-- End Slideshow Banner -->
+    }
+  })
+  function displayCitys(value){
+    input.value = value;
+    removeElements();
+  }
+  function removeElements(){
+    // clear all the item
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+      item.remove();
+    });
+  }
+  
 
+</script>
+  
   <!-- lETTER -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -344,12 +458,12 @@ document.addEventListener("DOMContentLoaded", function() {
   <!-- script voice search -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const searchInput = document.getElementById("search-input");
+    const searchInput = document.getElementById("input");
     const voiceSearchButton = document.getElementById("voice-search-button");
 
     function startSpeechRecognition() {
         const recognition = new webkitSpeechRecognition(); // Sử dụng webkitSpeechRecognition cho trình duyệt Chrome
-        recognition.lang = "en-US";
+        recognition.lang = "vi-VN";
 
         recognition.onresult = function(event) {
             const result = event.results[0][0].transcript;
@@ -373,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script src="./js/main.js"></script>
+  <!-- <script src="./js/main.js"></script> -->
 </body>
 
 </html>

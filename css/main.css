@@ -14,6 +14,9 @@ li{
 span{
     font-weight: 600;
 }
+.offcanvas-backdrop{
+    background-color: none !;
+}
 /* header */
 body{
     background-color: #f2ece2 !important;
@@ -57,7 +60,7 @@ body{
     outline: none;
     font-size: 1.2rem;
     color: #58574b;
-    padding: 0px 16px;
+    padding: 3px 16px;
     border-radius: 20px;
     background-color: #a9c0b2;
 }
@@ -92,6 +95,19 @@ body{
     box-shadow: rgb(201, 199, 199) 0px 1px 5px;
     display: none;
     overflow: hidden;
+}
+.list{
+    margin-top: 10px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: rgb(201, 199, 199) 0px 1px 5px;
+    padding-left: 0;
+}
+.list-items{
+    padding: 6px 12px;
+}
+.list-items:hover{
+    background-color: #fafafa;
 }
 .header__search-history-heading {
     margin: 6px 12px;
@@ -194,7 +210,8 @@ body{
 /* navbar */
 .navbar{
     border-bottom: 3px solid #b7b6a2;
-    bottom: -16px;
+    /* bottom: -16px; */
+    padding-bottom: 0;
 }
 .nav-link{
     font-size: 1.2rem;

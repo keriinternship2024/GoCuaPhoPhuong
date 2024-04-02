@@ -33,17 +33,15 @@
   tabindex="0">
 
   <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 ">
       <div class="container-fluid">
         <ul class="navbar-translate">
-          <li class="nav-item">VIETNAM</li>
-          <li class="nav-item">ENGLISH</li>
-          <li class="nav-item">CHINA</li>
-          
-
+          <a href=""><li class="nav-item">VIETNAM</li></a>
+          <a href=""><li class="nav-item">ENGLISH</li></a>
+          <a href=""><li class="nav-item">CHINA</li></a>
         </ul>
         <a class="navbar-brand" href="index.html">
-          <img src="images/main-logo.png" class="logo">
+          <img src="./images/logo.png" class="logo" style="width: 200px; margin-left: -35px;">
         </a>
         <button class="navbar-toggler fas fa-bars d-flex d-lg-none order-3 p-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <svg class="navbar-icon fas fa-bars"> -->
@@ -75,26 +73,34 @@
                        
                   </a>                 
               </div> -->
-
               <input type="checkbox" hidden="" id="mobile-search-checkbox" class="header__search-checkbox">
               <div class="header__search">
                   <div class=" header__search-input-wrap">
-                      <input type="text" id="search-input" class=" header__search-input" placeholder="Search">
+                      <!-- <input type="text" id="search-input" class=" header__search-input" placeholder="Search"> -->
                       <!-- Search history -->
-                      <div class="header__search-history">
+                      <!-- <div class="header__search-history">
                           <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                           <ul class="header__search-history-list">
                               <li class="header__search-history-item">
-                                  <a href="">Phố <span></span> Mã Mây</a>
+                                  <a href="">Phố Mã Mây</a>
                               </li>
                               <li class="header__search-history-item">
-                                  <a href="">Phố <span></span> Hàng Mã</a>
+                                  <a href="">Phố Hàng Mã</a>
                               </li>
                               <li class="header__search-history-item">
                                   <a href="">Phố Hàng Bè</a>
                               </li>
                           </ul>
-                      </div>
+                      </div> -->
+                      
+                        <form autocomplete="off" class=" header__search-input">
+                          <div>
+                            <input type="text" id="input" class=" header__search-input" placeholder="Typa a name here...">
+                          </div>
+                          <ul class="list">
+          
+                          </ul>
+                        </form>
                   </div>
                   <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
                     <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
@@ -127,7 +133,7 @@
     </nav>
   </header>
 
-  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px; position: absolute; top: -24px;">
     <!-- Slideshow banner  -->
     <div class="slider">
       <div class="slides">
@@ -138,10 +144,42 @@
         <!-- radio buttons end -->
         <!-- slide image start -->
         <div class="slide first">
-          <img src="./images/map.jpg" alt="Gõ Cửa Phố Phường">
+          <img onclick="closebtn()" src="./images/map.jpg" alt="Gõ Cửa Phố Phường">
         </div>
 
         
+      </div>
+      <!-- Maker Start -->
+      <div class="maker" id="marker">
+        <div class="box updown-animation" style="top: 340px; left: 750px; position: absolute;">
+          <div class="wrapper">
+            <div class="flag">
+              <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box updown-animation" style="top: 455px; left: 530px; position: absolute;">
+          <div class="wrapper">
+            <div class="flag">
+              <!-- <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Nhà thờ lớn</p> -->
+              <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box updown-animation" style="top: 505px; left: 510px; position: absolute;">
+          <div class="wrapper">
+            <div class="flag">
+              <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box updown-animation" style="top: 600px; left: 650px; position: absolute;">
+          <div class="wrapper">
+            <div class="flag">
+              <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="menu">
@@ -186,9 +224,9 @@
           <div class="offcanvas-body" style="background-color: #ece5d8; border: 4px solid #a9a791; border-top: none; border-radius: 0 0 16px 16px;" >
             <div >
               <ul class="list-place">
-                <li> <span>
+                <li onclick="clickbtn()"> <span>
                   <div class="dropdown mt-3">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" style="color: #58574b; background-color: transparent; border: none; margin-left: -11px;">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" style="color: #2c3034; background-color: transparent; border: none; margin-left: -11px; font-weight: 800;">
                         Di tích cổ
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -220,9 +258,9 @@
         </div>
       </div>
       
-      <div class="offcanvas offcanvas-end offcanvas-m152 " style="width:230px;  visibility: inherit; transform: none;  padding: 2px; background-color: #f2ece2; opacity: 0.9;">
+      <div class="offcanvas offcanvas-end offcanvas-m152 " style="max-height: fit-content; width:140px;  visibility: inherit; transform: none;  padding: 2px; background-color: #f2ece2; opacity: 0.9;">
         <div class="offcanvas-header" style="display: flex; padding: 10px 1rem; justify-content: center; background-color: #b0c6b9; border-radius: 16px 16px 0 0 ; border: 4px solid #a9a791; border-bottom: none;">
-          <h3 id="offcanvasRightLabel" style="color: #58574b; margin-top: 1rem; margin-left: 5px;">DỊCH VỤ </h3>
+          <h3 id="offcanvasRightLabel" style="color: #58574b; font-size: 1.4rem;">DỊCH VỤ </h3>
           <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
         </div>
         <div class="offcanvas-body" style="border: 4px solid #a9a791; border-top: none; border-radius: 0 0 16px 16px; ">
@@ -378,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function startSpeechRecognition() {
         const recognition = new webkitSpeechRecognition(); // Sử dụng webkitSpeechRecognition cho trình duyệt Chrome
-        recognition.lang = "en-US";
+        recognition.lang = "vi-VN";
 
         recognition.onresult = function(event) {
             const result = event.results[0][0].transcript;
@@ -393,6 +431,93 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
+<script>
+  // Lấy tham chiếu đến modal và nút
+ 
+  // var span = document.getElementsByClassName("close")[0];
+
+  // Khi người dùng nhấp vào nút, hiển thị modal
+ function clickbtn() {
+  var marker = document.getElementById("marker").style.display='block';
+     
+  }
+
+  function closebtn() {
+  var marker = document.getElementById("marker").style.display='none';
+     
+  }
+
+  // Khi người dùng nhấp vào bất kỳ đâu bên ngoài modal, đóng modal
+ 
+</script>
+
+<!-- search -->
+<script>
+  let citys = [
+    "Phố Hàng Bạc ",
+    "Phố Hàng Mây",
+    "Phố Hàng Bông",
+    "Phố Hàng Bè",
+    "Phố Hàng Giấy",
+    "Phố Đồng Lạc",
+    "Phố Lãn Ông",
+    "Phố Nguyễn Du",
+    "Phố Hàng Đường",
+    "Phố Hàng Mành",
+    "Phố Hàng Hòm",
+    "Phố Hàng Gà",
+    "Phố Hàng Đồng",
+    "Phố Hàng Bồ"
+
+  ];
+  // Sort citys in ascending order
+  let sortedCitys = citys.sort();
+
+  // reference to
+  let input = document.getElementById("input");
+
+  // Excute function on keyup
+  input.addEventListener("keyup",(e) =>{
+    // loop through above array
+    // Initially remove al elements ( so if user erases a letter or adds new letter then clean previous output)
+    removeElements();
+    for (let i of sortedCitys) {
+      // convert input to lowercase and compare with each string
+      
+      if(i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+      input.value != ""
+      ){
+        // create li element
+        let listItem = document.createElement("li");
+        // One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayCitys('" + i + "')");
+        // Display matched part in bold
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        // display the value in array 
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+        
+      }
+    }
+  })
+  function displayCitys(value){
+    input.value = value;
+    removeElements();
+  }
+  function removeElements(){
+    // clear all the item
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+      item.remove();
+    });
+  }
+  
+
+</script>
+
   <!-- END LETTER -->
 
   <script src="js/jquery-1.11.0.min.js"></script>
@@ -403,7 +528,6 @@ document.addEventListener("DOMContentLoaded", function() {
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script src="./js/main.js"></script>
   <script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.js'></script>
 </body>
 
