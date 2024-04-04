@@ -34,7 +34,7 @@
   tabindex="0" style="background-color: #f2ece2 !important">
 
   <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 ">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 " >
       <div class="container-fluid">
         <ul class="navbar-translate">
           <a href=""><li class="nav-item">VIETNAM</li></a>
@@ -42,7 +42,7 @@
           <a href=""><li class="nav-item">CHINA</li></a>
         </ul>
         <a class="navbar-brand" href="index.html">
-          <img src="./images/logo.png" class="logo" style="width: 200px; margin-left: -35px;">
+          <img src="./images/01.png" class="logo" style="width: 200px; margin-left: -35px;">
         </a>
         <button class="navbar-toggler fas fa-bars d-flex d-lg-none order-3 p-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <svg class="navbar-icon fas fa-bars"> -->
@@ -52,7 +52,7 @@
         <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
           <div class="offcanvas-header px-4 pb-0">
             <a class="navbar-brand" href="index.html">
-              <img src="images/main-logo.png" class="logo">
+              <img src="./images/01.png" class="logo">
             </a>
             <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
           </div>
@@ -104,18 +104,21 @@
                         </form>
                   </div>
                   <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
-                    <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
+                    <!-- <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i> -->
+                    <img class="header__search-btn-icon" src="./images/04.png" alt="" style="color: #58574b;">
                 </button>
                 
                   <button class="header__search-btn">
-                      <i class="header__search-btn-icon fas fa-search" style="color: #58574b;"></i>
+                      <!-- <i class="header__search-btn-icon fas fa-search" ></i> -->
+                      <img src="./images/05.png" alt="" class="header__search-btn-icon" style="color: #58574b; width: 20px;">
                   </button>
               </div>
-              <li class="nav-item">
+              <li class="nav-item" >
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
+                    
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <a href="#" class="volume-button">
+                      <a href="#" class="volume-button" >
                         <audio id="background-music" loop autoplay>
                           <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
                           Your browser does not support the audio element.
@@ -162,8 +165,8 @@
                 </ul>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-4" style="margin-top: 200px; padding: 30px;">
-          <div class="title-place">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-4" style="margin-top: 200px; padding: 30px; position: relative; right: 4%;">
+          <div class="title-place" style="font-size: 24px; font-weight: 500; color: #58574b;">
             Ô QUAN CHƯỞNG
           </div>
           <div class="content-place" style="text-align: justify;">
@@ -177,24 +180,35 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
+                      <img src="./images/27.png" width="42px" alt="">
+                      <!-- <button id="toggle-icon" class="nav-item__bt fas fa-cloud" style="background-color: #ceb1c0; box-shadow: 0px 2px #ceb1c0;"></button> -->
+                    <!-- </li> -->
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="user-items pl-8">
+                  <ul class="d-flex justify-content-end list-unstyled">
+                    <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
                       <a href="#" class="volume-button">
                         <audio id="background-music" loop autoplay>
                           <source src="" type="audio/mp3">
                           Your browser does not support the audio element.
                       </audio>
-              
-                      <button id="toggle-icon" class="nav-item__bt fa-solid fa-volume-high"></button>
+                      <img src="./images/26.png" width="40px" alt="" id="toggle-icon">
+                      <!-- <button id="toggle-icon" class="nav-item__bt fa-solid fa-volume-high"></button> -->
                       </a>
                     <!-- </li> -->
                   </ul>
                 </div>
               </li>
+              
               <li class="nav-item">
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      
-                      <button id="toggle-icon" class="nav-item__bt fas fa-cloud" style="background-color: #ceb1c0; box-shadow: 0px 2px #ceb1c0;"></button>
+                      <img src="./images/28.png" width="40px" alt="" class="nav__item-btn--play">
+                      <!-- <button id="toggle-icon" class="nav__item-btn--play nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button> -->
                     <!-- </li> -->
                   </ul>
                 </div>
@@ -203,17 +217,8 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      
-                      <button id="toggle-icon" class="nav__item-btn--play nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button>
-                    <!-- </li> -->
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="user-items pl-8">
-                  <ul class="d-flex justify-content-end list-unstyled">
-                    <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <button id="toggle-icon" class="nav__item-btn--play nav-item__bt  fas fa-play" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button>
+                      <img src="./images/29.png" width="40px" alt="" class="nav__item-btn--play">
+                      <!-- <button id="toggle-icon" class="nav__item-btn--play nav-item__bt  fas fa-play" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button> -->
                     <!-- </li> -->
                   </ul>
                 </div>

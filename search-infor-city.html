@@ -33,7 +33,7 @@
   tabindex="0">
 
   <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 ">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 " >
       <div class="container-fluid">
         <ul class="navbar-translate">
           <a href=""><li class="nav-item">VIETNAM</li></a>
@@ -41,7 +41,7 @@
           <a href=""><li class="nav-item">CHINA</li></a>
         </ul>
         <a class="navbar-brand" href="index.html">
-          <img src="./images/logo.png" class="logo" style="width: 200px; margin-left: -35px;">
+          <img src="./images/01.png" class="logo" style="width: 200px; margin-left: -35px;">
         </a>
         <button class="navbar-toggler fas fa-bars d-flex d-lg-none order-3 p-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <svg class="navbar-icon fas fa-bars"> -->
@@ -51,7 +51,7 @@
         <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
           <div class="offcanvas-header px-4 pb-0">
             <a class="navbar-brand" href="index.html">
-              <img src="images/main-logo.png" class="logo">
+              <img src="./images/01.png" class="logo">
             </a>
             <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
           </div>
@@ -103,18 +103,21 @@
                         </form>
                   </div>
                   <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
-                    <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
+                    <!-- <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i> -->
+                    <img class="header__search-btn-icon" src="./images/04.png" alt="" style="color: #58574b;">
                 </button>
                 
                   <button class="header__search-btn">
-                      <i class="header__search-btn-icon fas fa-search" style="color: #58574b;"></i>
+                      <!-- <i class="header__search-btn-icon fas fa-search" ></i> -->
+                      <img src="./images/05.png" alt="" class="header__search-btn-icon" style="color: #58574b; width: 20px;">
                   </button>
               </div>
-              <li class="nav-item">
+              <li class="nav-item" >
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
+                    
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <a href="#" class="volume-button">
+                      <a href="#" class="volume-button" >
                         <audio id="background-music" loop autoplay>
                           <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
                           Your browser does not support the audio element.
@@ -152,33 +155,36 @@
       <!-- Maker Start -->
       <div class="maker" id="marker">
         <div class="box updown-animation" style="top: 340px; left: 750px; position: absolute;">
-          <div class="wrapper">
+          <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
-          </div>
+          </div> -->
+          <img src="./images/48.png" width="34px" alt="">
         </div>
         <div class="box updown-animation" style="top: 455px; left: 530px; position: absolute;">
-          <div class="wrapper">
+          <!-- <div class="wrapper">
             <div class="flag">
-              <!-- <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Nhà thờ lớn</p> -->
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
-          </div>
+          </div> -->
+          <img src="./images/48.png" width="34px" alt="">
         </div>
         <div class="box updown-animation" style="top: 505px; left: 510px; position: absolute;">
-          <div class="wrapper">
+          <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
-          </div>
+          </div> -->
+          <img src="./images/48.png" width="34px" alt="">
         </div>
         <div class="box updown-animation" style="top: 600px; left: 650px; position: absolute;">
-          <div class="wrapper">
+          <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
-          </div>
+          </div> -->
+          <img src="./images/48.png" width="34px" alt="">
         </div>
       </div>
 
@@ -213,10 +219,12 @@
                   </div>
               </div>
               <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
-                  <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
+                  <!-- <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i> -->
+                  <img class="header__search-btn-icon" src="./images/04.png" alt="" style="color: #58574b;">
               </button>
               <button class="header__search-btn--menu" style="background-color: #b0c6b9;">
-                  <i class="header__search-btn-icon fas fa-search"></i>
+                  <!-- <i class="header__search-btn-icon fas fa-search"></i> -->
+                  <img src="./images/05.png" alt="" id="change_place" class="header__search-btn-icon" style="color: #58574b; width: 20px;">              
               </button>
           </div>
             <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
@@ -230,7 +238,7 @@
                         Di tích cổ
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2"><a class="dropdown-item" >Ô Quan Chưởng</a>
+                        <li onclick="change_place()" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2"><a class="dropdown-item" >Ô Quan Chưởng</a>
 
                       </li>
                         <li><a class="dropdown-item" href="#">Tháp Rùa </a></li>
@@ -240,8 +248,22 @@
                     </div>
                 </span>
                 </li>
-                
-                <li  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"> <span>Công trình kiến trúc Pháp</span>
+                <li onclick="clickbtn()"> <span>
+                  <div class="dropdown ">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" style="color: #2c3034; background-color: transparent; border: none; margin-left: -11px; font-weight: 800;">
+                        Công trình kiến trúc Pháp
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li onclick="change_place()" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2"><a class="dropdown-item" >Ô Quan Chưởng</a>
+
+                      </li>
+                        <li><a class="dropdown-item" href="#">Tháp Rùa </a></li>
+                        <li><a class="dropdown-item" href="#">Đền Bạch Mã</a></li>
+                        <li><a class="dropdown-item" href="#">Tháp Hòa Phong</a></li>
+                      </ul>
+                    </div>
+                </span>
+                </li>
                   
                 </li>
                 <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"> <span>Công trình tôn giáo, tín ngưỡng</span> </li>
@@ -447,6 +469,9 @@ document.addEventListener("DOMContentLoaded", function() {
      
   }
 
+  function change_place(){
+    var place = document.getElementById("change_place").style.display='none';
+  }
   // Khi người dùng nhấp vào bất kỳ đâu bên ngoài modal, đóng modal
  
 </script>

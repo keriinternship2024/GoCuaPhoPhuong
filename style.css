@@ -241,7 +241,7 @@ a:hover {
   color: var(--light-color);
   border-radius: 50%;
   border: 1px solid #81806f;
-  box-shadow: -1px 1px #81806f;
+  box-shadow: -2px 3px #a9c0b2;
 }
 .btn.btn-primary:hover {
   background-color: var(--dark-color);

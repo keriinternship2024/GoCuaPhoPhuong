@@ -46,8 +46,8 @@ body{
     border-radius: 40px;
     background-color: #a9c0b2;
     align-items: center;
-    border: 1px solid #81806f;
-    box-shadow: 0px 2px #a9c0b2;
+    border: 2px solid #81806f;
+    box-shadow: 0px 4px #a9c0b2;
 }
 .header__search-input-wrap{
     /* ke thua theo chieu ngang */
@@ -144,6 +144,7 @@ body{
 .header__search-btn-icon {
     font-size: 0.8rem;
     color: #58574b;
+    width: 14px;
 }
 .header__search-select:hover .header__search-option {
     display: block;
@@ -227,12 +228,12 @@ body{
     padding-right: 3rem;
 }
 .nav-item__bt {
-    border: 1px solid #58574b;
+    border: 2px solid #81806f;
     border-radius: 50%;
     padding: 8px 6px;
     color: #58574b;
     background-color: #a9c0b2;
-    box-shadow: 0px 2px #a9c0b2;
+    box-shadow: 1px 3px #a9c0b2;
 }
 /* Slider */
 .slider {
@@ -416,9 +417,10 @@ body{
     justify-content: center;
     margin-right: 5px;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 4px;
     box-shadow: -2px 3px #5d5b44;
+    color: #ffff;
 }
 
 .letter:last-child {

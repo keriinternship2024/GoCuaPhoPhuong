@@ -32,15 +32,15 @@
   tabindex="0">
 
   <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 ">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 " >
       <div class="container-fluid">
         <ul class="navbar-translate">
-          <a href="" ><li class="nav-item">VIETNAM</li></a>
+          <a href=""><li class="nav-item">VIETNAM</li></a>
           <a href=""><li class="nav-item">ENGLISH</li></a>
           <a href=""><li class="nav-item">CHINA</li></a>
         </ul>
         <a class="navbar-brand" href="index.html">
-          <img  src="./images/logo.png" class="logo" style="width: 200px; margin-left: -35px;">
+          <img src="./images/01.png" class="logo" style="width: 200px; margin-left: -35px;">
         </a>
         <button class="navbar-toggler fas fa-bars d-flex d-lg-none order-3 p-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <svg class="navbar-icon fas fa-bars"> -->
@@ -50,19 +50,18 @@
         <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
           <div class="offcanvas-header px-4 pb-0">
             <a class="navbar-brand" href="index.html">
-              <img src="images/main-logo.png" class="logo">
+              <img src="./images/01.png" class="logo">
             </a>
             <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
           </div>
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav  justify-content-end align-items-center flex-grow-1 ">
               <li class="nav-item">
-                <a class="nav-link me-4 active" href="#billboard">Tham quan phố phường </a>
+                <a class="nav-link me-4 active" href="#billboard">Tham quan phố phường</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link me-4" href="#company-services">Về chúng tôi</a>
               </li>
-
               <div class="header-with-search">
                 <label for="mobile-search-checkbox" class="header__mobile-search">
                   <i class="header__mobile-search-icon fas fa-search" style="color: #b7b7b7;"></i>
@@ -103,18 +102,21 @@
                         </form>
                   </div>
                   <button id="voice-search-button" onclick="startSpeechRecognition()" class="header__search-btn">
-                    <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i>
+                    <!-- <i class="header__search-btn-icon fa-solid fa-microphone" style="color: #58574b;"></i> -->
+                    <img class="header__search-btn-icon" src="./images/04.png" alt="" style="color: #58574b;">
                 </button>
                 
                   <button class="header__search-btn">
-                      <i class="header__search-btn-icon fas fa-search" style="color: #58574b;"></i>
+                      <!-- <i class="header__search-btn-icon fas fa-search" ></i> -->
+                      <img src="./images/05.png" alt="" class="header__search-btn-icon" style="color: #58574b; width: 20px;">
                   </button>
               </div>
-              <li class="nav-item">
+              <li class="nav-item" >
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
+                    
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <a href="#" class="volume-button">
+                      <a href="#" class="volume-button" >
                         <audio id="background-music" loop autoplay>
                           <source src="./music/EmXinh-MONOOnionn-12581640.mp3" type="audio/mp3">
                           Your browser does not support the audio element.
@@ -152,18 +154,20 @@
       <!-- Maker Start -->
       <div class="maker" id="marker">
         <div class="box updown-animation" style="top: 180px; left: 500px; position: absolute;">
-          <div class="wrapper">
+          <!-- <div class="wrapper">
             <div class="flag">
               <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Phố Mã Mây</p>
             </div>
-          </div>
+          </div> -->
+          <img src="./images/02.png"  width="120px">
         </div>
         <div class="box updown-animation" style="top: 340px; left: 750px; position: absolute;">
-          <div class="wrapper">
+          <!-- <div class="wrapper">
             <div class="flag">
               <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Phố Mã Mây</p>
             </div>
-          </div>
+          </div> -->
+          <img src="./images/02.png"  width="120px">
         </div>
       </div>
 
@@ -171,8 +175,8 @@
         <a class=" btn btn-primary btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
             <i class="fas fa-bars"></i>
           </a>
-          <div class="offcanvas offcanvas-start offcanvas-m152" style="opacity: 0.95;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
+          <div class="offcanvas offcanvas-start offcanvas-m152" style="opacity: 0.95; width: 358px; margin-bottom: 30px; padding: 4px;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header" style="border: 3px solid #abaa95; border-radius: 16px 16px 0 0; border-bottom: none;">
               <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
               <a class=" btn btn-primary btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 <i class="fas fa-bars"></i>
@@ -199,12 +203,13 @@
                     
                 </div>
                 <button class="header__search-btn--menu">
-                    <i class="header__search-btn-icon fas fa-search"></i>
+                    <img class="header__search-btn-icon" src="./images/05.png" alt="" style="color: #58574b; width: 20px;">
+
                 </button>
             </div>
               <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
             </div>
-            <div class="offcanvas-body" >
+            <div class="offcanvas-body" style="border: 3px solid #abaa95; border-radius: 0 0 16px 16px; border-top: none; padding: 0;" >
               <div style="display: flex;">
                 <ul class="list-place">
                   <li id="myButton" onclick="clickbtn()" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Phố <span>Mã Mây</span>
