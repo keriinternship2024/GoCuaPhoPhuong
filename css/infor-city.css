@@ -246,6 +246,45 @@ header a{
     z-index: 1;
 }
 
+
+/* btn road */
+.btn_road{
+    position: absolute;
+    top: 42%;
+    left: 49%;
+    padding: 81px 24px;
+    z-index: 1;
+    opacity: 0.6;
+    border-top: none;
+    border-bottom: none;
+}
+.btn_road::after{
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    /* right: 1px; */
+    /* top: 44px; */
+    bottom: -65px;
+    left: 0px;
+    border-width: 33px 25px;
+    /* border: 1px solid; */
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+
+}
+.btn_road::before{
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    /* right: 1px; */
+    top: -65px;
+    /* bottom: -67px; */
+    left: 0px;
+    border-width: 33px 25px;
+    /* border: 1px solid; */
+    border-style: solid;
+    border-color:  transparent transparent #ffffff transparent;
+}
 /* animation text in first item */
 
 .carousel .list .item:nth-child(1) .content .author,
