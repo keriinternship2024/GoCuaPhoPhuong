@@ -520,7 +520,7 @@ a:hover {
 }
 #header-nav .offcanvas.show {
     z-index: 9999;
-    background-color: var(--light-blue-color);
+    background-color: #f2ece2;
 }
 #header-nav .offcanvas-end {
     width: 500px;

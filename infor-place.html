@@ -207,7 +207,7 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <img src="./images/28.png" width="40px" alt="" class="nav__item-btn--play">
+                      <img src="./images/28.png" width="40px" alt="" class="nav__item-btn--play" onclick="enableAutoplay()">
                       <!-- <button id="toggle-icon" class="nav__item-btn--play nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button> -->
                     <!-- </li> -->
                   </ul>
@@ -217,7 +217,7 @@
                 <div class="user-items pl-8">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                      <img src="./images/29.png" width="40px" alt="" class="nav__item-btn--play">
+                      <img src="./images/29.png" width="40px" alt="" class="nav__item-btn--play" onclick="enableAutoplay()">
                       <!-- <button id="toggle-icon" class="nav__item-btn--play nav-item__bt  fas fa-play" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button> -->
                     <!-- </li> -->
                   </ul>
@@ -235,8 +235,11 @@
     <div class="popupvideo">
       <div class="popupvideo__inner">
         <div class="popupvideo__inner-iframe">
-          <iframe width="100%" height="100%" style="position: absolute;" src="./video/video_test.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <div class="popupvideo__inner-close">
+          <video id="myVideo" width="100%" height="100%" style="position: absolute;" controls="controls" >
+            <source src="./video/video_test.mp4" type="video/mp4">
+          </video>
+          <!-- <iframe width="100%" height="100%" style="position: absolute;" src="./video/video_test.mp4" title="YouTube video player" frameborder="0"  allowfullscreen></iframe> -->
+          <div class="popupvideo__inner-close" onclick="disableAutoplay()">
             <i class="fas fa-times"></i> 
           </div>
         </div>
@@ -259,9 +262,27 @@ function handleModalVideo(){
             // let dataID = video.getAttribute('data-video-src');
             // console.log(dataID)
             // Set ID iframe
-            iframeModalVideo.setAttribute('src','https://www.youtube.com/embed/FWqT8BxWhfg?si=_JwiiYVzQWXox9c4');
+            // iframeModalVideo.setAttribute('src','');
+            enableAutoplay();
         })
     });
+
+   
+
+let vid = document.getElementById("myVideo");
+//  vid.autoplay = true;
+function enableAutoplay() { 
+  vid.autoplay = true;
+  vid.load();
+}
+
+function disableAutoplay() { 
+  vid.autoplay = false;
+  vid.load();
+} 
+
+
+
     function closeModal(){
         // Hide modal
         modalVideo.classList.remove('active');
@@ -271,9 +292,11 @@ function handleModalVideo(){
     }
     btnClose.addEventListener('click', function(){
         closeModal();
+        
     })
     modalVideo.addEventListener('click', function(){
         closeModal();
+        disableAutoplay();
     });
 }
 handleModalVideo();

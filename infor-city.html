@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 
 </head>
 <body>
@@ -113,8 +114,8 @@
     </div>
     
         <div class="row" style="background-color: #ffff;">
-            <div class="col-xl-4 col-lg-4 col-md-4 col-4">
-              <ul class="nav" style="padding: 20px 5px;">
+            <div class="col-xl-4 col-lg-4 col-md-8 col-8">
+              <ul class="nav pd" style="padding: 20px 5px;">
                 <li class="nav-item">
                   <div class="user-items pl-8">
                     <ul class="d-flex justify-content-end list-unstyled">
@@ -136,7 +137,7 @@
                     <ul class="d-flex justify-content-end list-unstyled">
                       <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->              
                         <!-- <button id="toggle-icon" class="nav-item__bt fas fa-cloud" style="background-color: #ceb1c0; box-shadow: 0px 2px #ceb1c0;"></button> -->
-                        <img src="./images/27.png" alt="" width="42px">
+                        <img src="./images/27.png" alt="" width="42px" >
                       <!-- </li> -->
                     </ul>
                   </div>
@@ -146,7 +147,7 @@
                     <ul class="d-flex justify-content-end list-unstyled">
                       <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
                         <!-- <button id="toggle-icon" class="nav__item-btn--play nav-item__bt " style="background-color: #a5c3d2; box-shadow: 0px 2px #a5c3d2; padding: 4px 4px;">360</button> -->
-                        <img src="./images/28.png" width="40px" alt="" class="nav__item-btn--play ">
+                        <img src="./images/28.png" width="40px" alt="" class="nav__item-btn--play " onclick="enableAutoplay()">
                         <!-- </li> -->
                     </ul>
                   </div>
@@ -156,7 +157,7 @@
                     <ul class="d-flex justify-content-end list-unstyled">
                       <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
                         <!-- <button id="toggle-icon" class="nav__item-btn--play nav-item__bt fas fa-play" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 10px;"></button> -->
-                        <img src="./images/29.png" width="40px" alt="" class="nav__item-btn--play ">
+                        <img src="./images/29.png" width="40px" alt="" class="nav__item-btn--play " onclick="enableAutoplay()">
                         <!-- </li> -->
                     </ul>
                   </div>
@@ -164,12 +165,12 @@
               </ul>
               
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-4 dn">
               <img src="./images/the-road.png" alt="" style="position: relative; left: -30%;">
               <img src="./images/30.png" alt="" class="btn_road">
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-4">
-              <ul class="nav" style="position: absolute; padding: 20px 5px; right: 1%;">
+              <ul class="nav pd" style="position: absolute; padding: 20px 5px; right: 1%;">
                 <li class="nav-item">
                   <div class="user-items pl-8">
                     <ul class="d-flex justify-content-end list-unstyled">
@@ -199,7 +200,7 @@
     <!-- list thumnail -->
     <div class="carousel" style="height: 40vh;  margin-top: 0; background-image: url(./images/33.png); background-repeat: round;">
         <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-4">
+            <div class="col-xl-3 col-lg-4 col-md-12">
                 <div class="content ">
                     <div class="topic" style="font-size: 1.4rem; color: #58574b;">PHỐ MÃ MÂY</div>
                     <div class="des">
@@ -210,9 +211,9 @@
                     
                 </div>
             </div>
-            <div class="col-xl-9 col-lg-8 col-md-8">
+            <div class="col-xl-9 col-lg-8 col-md-0">
                 <div class="thumbnail ">
-                    <div class="item">
+                    <div class="item col-xl-2 col-lg-2 col-md-6">
                         <img src="./images/banner-map-1.webp">
                         <div class="content">
                             <div class="title">
@@ -223,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item col-xl-2 col-lg-2 col-md-6">
                         <img src="./images/banner-map-2.jpg">
                         <div class="content">
                             <div class="title">
@@ -234,7 +235,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item col-xl-2 col-lg-2 col-md-6">
                         <img src="./images/banner-map-3.jpg">
                         <div class="content">
                             <div class="title">
@@ -245,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item col-xl-2 col-lg-2 col-md-6">
                         <img src="./images/banner-map-4.jpg">
                         <div class="content">
                             <div class="title">
@@ -256,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item col-xl-2 col-lg-2 col-md-6">
                         <img src="./images/banner-map-5.jpg">
                         <div class="content">
                             <div class="title">
@@ -278,50 +279,75 @@
 
     <!-- Modal -->
     <div class="popupvideo">
-      <div class="popupvideo__inner">
-        <div class="popupvideo__inner-iframe">
-          <iframe width="100%" height="100%" style="position: absolute;" src="./video/video_test.mp4" allowfullscreen></iframe>
-          <div class="popupvideo__inner-close">
-            <i class="fas fa-times"></i> 
+        <div class="popupvideo__inner">
+          <div class="popupvideo__inner-iframe">
+            <video id="myVideo" width="100%" height="100%" style="position: absolute; " controls="controls" >
+              <source src="./video/video_test.mp4" type="video/mp4">
+            </video>
+            <!-- <iframe width="100%" height="100%" style="position: absolute;" src="./video/video_test.mp4" title="YouTube video player" frameborder="0"  allowfullscreen></iframe> -->
+            <div class="popupvideo__inner-close" onclick="disableAutoplay()">
+              <i class="fas fa-times"></i> 
+            </div>
           </div>
         </div>
-      </div>
-    </div>    
-<!-- popupvideo -->
-<script>
-  // Modal video
-function handleModalVideo(){
-    let videos = document.querySelectorAll('.nav__item-btn--play');
-    let modalVideo = document.querySelector('.popupvideo');
-    let iframeModalVideo = document.querySelector('.popupvideoo .popupvideo__inner .popupvideo__inner-iframe');
-    let btnClose = document.querySelector('.popupvideo .popupvideo__inner .popupvideo__inner-iframe .popupvideo__inner-close');
-
-    videos.forEach(function (video) {
-        video.addEventListener('click', function(){
-            // show modal
-            modalVideo.classList.add('active');
-            // Get Data ID
-            // let dataID = video.getAttribute('data-video-src');
-            // console.log(dataID)
-            // Set ID iframe
-            iframeModalVideo.setAttribute('src','https://www.youtube.com/embed/FWqT8BxWhfg?si=_JwiiYVzQWXox9c4');
-        })
-    });
-    function closeModal(){
-        // Hide modal
-        modalVideo.classList.remove('active');
-        // Empty Src Iframe
-        iframeModalVideo.setAttribute('src', '');
-    }
-    btnClose.addEventListener('click', function(){
-        closeModal();
-    })
-    modalVideo.addEventListener('click', function(){
-        closeModal();
-    });
-}
-handleModalVideo();
-</script>
+      </div>    
+  <!-- popupvideo -->
+  <script>
+    // Modal video
+  function handleModalVideo(){
+      let videos = document.querySelectorAll('.nav__item-btn--play');
+      let modalVideo = document.querySelector('.popupvideo');
+      let iframeModalVideo = document.querySelector('.popupvideo__inner-iframe');
+      let btnClose = document.querySelector('.popupvideo .popupvideo__inner .popupvideo__inner-iframe .popupvideo__inner-close');
+  
+      videos.forEach(function (video) {
+          video.addEventListener('click', function(){
+              // show modal
+              modalVideo.classList.add('active');
+              // Get Data ID
+              // let dataID = video.getAttribute('data-video-src');
+              // console.log(dataID)
+              // Set ID iframe
+              // iframeModalVideo.setAttribute('src','');
+              enableAutoplay();
+          })
+      });
+  
+     
+  
+  let vid = document.getElementById("myVideo");
+//    vid.autoplay = true;
+  function enableAutoplay() { 
+    vid.autoplay = true;
+    vid.load();
+  }
+  
+  function disableAutoplay() { 
+    vid.autoplay = false;
+    vid.load();
+  } 
+  
+  
+  
+      function closeModal(){
+          // Hide modal
+          modalVideo.classList.remove('active');
+  
+          // Empty Src Iframe
+          iframeModalVideo.setAttribute("src","");
+      }
+      btnClose.addEventListener('click', function(){
+          closeModal();
+          
+      })
+      modalVideo.addEventListener('click', function(){
+          closeModal();
+          disableAutoplay();
+      });
+  }
+  handleModalVideo();
+  </script>
+  
     <!-- // script music -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
