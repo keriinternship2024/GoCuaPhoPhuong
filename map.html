@@ -32,7 +32,7 @@
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
   tabindex="0">
 
-  <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
+  <header id="header" class="site-header header-scrolled position-fixed text-black bg-light" style="top: 25px;">
     <nav id="header-nav" class="navbar navbar-expand-lg px-3 " >
       <div class="container-fluid">
         <ul class="navbar-translate">
@@ -136,7 +136,7 @@
     </nav>
   </header>
 
-  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px; position: absolute; top: -24px;">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-12" style="padding:0px; position: fixed; top: -10px;">
     <!-- Slideshow banner  -->
     <div class="slider">
       <div class="slides">
@@ -154,7 +154,7 @@
       </div>
       <!-- Maker Start -->
       <div class="maker maker__map" id="marker">
-        <div class="box updown-animation" style="top: 180px; left: 500px; position: absolute;">
+        <div class="box updown-animation" style="top: 210px; left: 500px; position: absolute;">
           <!-- <div class="wrapper">
             <div class="flag">
               <p style=" margin-bottom: 0; color: #58574b; font-weight: 500;">Phố Mã Mây</p>
@@ -162,6 +162,7 @@
           </div> -->
           <img src="./images/02.png"  width="120px">
         </div>
+        
         <div class="box updown-animation" style="top: 340px; left: 750px; position: absolute;">
           <!-- <div class="wrapper">
             <div class="flag">
@@ -176,7 +177,7 @@
         <a class=" btn btn-primary btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
             <i class="fas fa-bars"></i>
           </a>
-          <div class="offcanvas offcanvas-start offcanvas-m152 offcanvas-menu" style="opacity: 0.95; width: 358px; margin-bottom: 30px; padding: 4px;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas offcanvas-start offcanvas-m152 offcanvas-menu" style="opacity: 0.95; width: 358px;  margin-top: 150px; padding: 4px;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header" style="border: 3px solid #abaa95; border-radius: 16px 16px 0 0; border-bottom: none;">
               <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
               <a class=" btn btn-primary btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -272,7 +273,7 @@
           </div>
       </div>
       
-      <div class="offcanvas offcanvas-end offcanvas-m152 " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width:230px; height: 550px;">
+      <div class="offcanvas offcanvas-end offcanvas-m152 " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width:230px; max-height: 660px;">
         <div class="offcanvas-header" style="display: block; padding: 10px 1rem;">
           <img src="./images/Ag_city.jpeg" alt="" style="width: 100%; border-radius: 8px 8px 0 0; height: 200px; object-fit: cover;">
           <h3 id="offcanvasRightLabel" style="color: #679a8f; margin-top: 1rem; margin-left: 5px;">Hàng Bạc </h3>

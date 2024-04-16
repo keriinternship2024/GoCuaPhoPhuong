@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/responsive.css">
 
 </head>
-<body>
+<body class="zoom-in-out">
     <!-- <header>
         <nav>
             <a href="">Home</a>
@@ -21,26 +21,26 @@
     </header> -->
 
     <!-- carousel -->
-    <div class="carousel">
+    <div  class="carousel">
         <!-- list item -->
-        <div class="list">
-            <div class="item">
+        <div   class="list ">
+            <div class="item" id="content-map">
                 <a href="./search-infor-city.html"><img src="./images/banner-map-1.webp"></a>
                 
             </div>
-            <div class="item">
+            <div class="item" id="content-map">
                 <a href="./search-infor-city.html"><img src="./images/banner-map-2.jpg"></a>
                 
             </div>
-            <div class="item">
+            <div class="item" id="content-map">
                 <a href="./search-infor-city.html"><img src="./images/banner-map-3.jpg"></a>
                 
             </div>
-            <div class="item">
+            <div class="item" id="content-map">
                 <a href="./search-infor-city.html"><img src="./images/banner-map-4.jpg"></a>
                 
             </div>
-            <div class="item">
+            <div class="item" id="content-map">
                 <a href="./search-infor-city.html"><img src="./images/banner-map-5.jpg"></a>
                 
             </div>
@@ -175,7 +175,7 @@
                   <div class="user-items pl-8">
                     <ul class="d-flex justify-content-end list-unstyled">
                       <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                        <img src="./images/31.png" width="40px" alt="">
+                        <img onclick="ZoomIn()" id="zoom-in"  src="./images/31.png" width="40px" alt="">
                         <!-- <button id="toggle-icon" class="nav-item__bt fa-solid fas fa-plus" style="padding: 8px 10px;"></button> -->
                       <!-- </li> -->
                     </ul>
@@ -187,7 +187,7 @@
                   <div class="user-items pl-8">
                     <ul class="d-flex justify-content-end list-unstyled">
                       <!-- <li class="nav-item__bt fa-solid fa-volume-high"> -->
-                        <img src="./images/32.png" width="40px" alt="">
+                        <img onclick="ZoomOut()" id="zoom-out"  src="./images/32.png" width="40px" alt="">
                         <!-- <button id="toggle-icon" class="nav-item__bt fas fa-window-minimize" style="background-color: #e2c693; box-shadow: 0px 2px #e2c693; padding: 8px 8px;"></button> -->
                       <!-- </li> -->
                     </ul>
@@ -198,7 +198,7 @@
           </div>
     
     <!-- list thumnail -->
-    <div class="carousel" style="height: 40vh;  margin-top: 0; background-image: url(./images/33.png); background-repeat: round;">
+    <div class="carousel" style="height: 40vh;  margin-top: 0; background-image: url(./images/33.png); background-repeat: no-repeat;">
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-12">
                 <div class="content ">
@@ -348,6 +348,31 @@
   handleModalVideo();
   </script>
   
+
+<!-- zoom in zoom out -->
+<script>
+  function ZoomIn() {
+  var myImg = document.getElementById("content-map");
+  var currWidth = myImg.clientWidth;
+  if (currWidth == 2500) return false;
+  else {
+    myImg.style.width = (currWidth + 100) + "px";
+  }
+}
+
+function ZoomOut() {
+  var myImg = document.getElementById("content-map");
+  var currWidth = myImg.clientWidth;
+  if (currWidth == 100) return false;
+  else {
+    myImg.style.width = (currWidth - 100) + "px";
+  }
+}
+
+
+
+</script>
+
     <!-- // script music -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {

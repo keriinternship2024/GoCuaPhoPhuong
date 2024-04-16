@@ -241,6 +241,33 @@ header a{
     justify-content: center;
 }
 
+
+/* zoom in zoom out */
+.zoom-in-out {
+    zoom: 1; /* Cho trình duyệt IE */
+}
+
+.zoom-in-out #content {
+    zoom: 100%; /* Reset zoom */
+    transition: transform 0.5s; /* Tạo hiệu ứng chuyển đổi mượt mà */
+}
+
+.zoom-in-out.zoom-in #content {
+    transform: scale(1.2); /* Phóng to 1.2 lần */
+}
+
+.zoom-in-out.zoom-out #content {
+    transform: scale(0.8); /* Thu nhỏ 0.8 lần */
+}
+
+.phongto:hover {
+    transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-transform: scale(1.5,1.5);
+    -ms-transform: scale(1.5,1.5);
+    }
+
 /* animation */
 .carousel .list .item:nth-child(1){
     z-index: 1;

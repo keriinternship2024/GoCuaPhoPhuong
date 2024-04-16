@@ -89,4 +89,11 @@ function showSlider(type){
     // }, timeAutoNext)
 }
 
+thumbnailItemsDom.forEach((item, key) => {
+    item.addEventListener('click', () => {
+        type = key;
+        showSlider(type);
+    });
+})
+
 
