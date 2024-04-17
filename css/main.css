@@ -42,12 +42,13 @@ body{
 .header__search {
     display: flex;
     flex: 1 1 0%;
-    height: 40px;
+    height: 60px;
+    width: 414px;
     border-radius: 40px;
-    background-color: #a9c0b2;
+    /* background-color: #a9c0b2; */
     align-items: center;
-    border: 2px solid #81806f;
-    box-shadow: 0px 4px #a9c0b2;
+    /* border: 2px solid #81806f;
+    box-shadow: 0px 4px #a9c0b2; */
 }
 .header__search-input-wrap{
     /* ke thua theo chieu ngang */
@@ -60,9 +61,10 @@ body{
     outline: none;
     font-size: 1.2rem;
     color: #58574b;
-    padding: 3px 16px;
+    padding: 2px 16px;
     border-radius: 20px;
-    background-color: #a9c0b2;
+    margin-top: 5px;
+    /* background-color: #a9c0b2; */
 }
 .header__search-select{
     position: relative;
@@ -226,15 +228,19 @@ body{
     font-size: 10px;
 }
 .navbar-nav {
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 .nav-item__bt {
-    border: 2px solid #81806f;
-    border-radius: 50%;
+    /* border: 2px solid #81806f;
+    border-radius: 50%; */
     padding: 8px 6px;
     color: #58574b;
     background-color: #a9c0b2;
-    box-shadow: 1px 3px #a9c0b2;
+    /* box-shadow: 1px 3px #a9c0b2; */
+    border: none !important;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
 }
 /* Slider */
 .slider {
@@ -263,7 +269,7 @@ body{
     margin-top: 132px;
     max-width: 100%;
     width: 2000px;
-    height: 700px;
+    /* height: 700px; */
     /* object-fit: cover; */
 }
 
@@ -401,33 +407,34 @@ body{
     flex-direction: column;
     align-items: flex-end;
     margin-right: 30px;
-    position: sticky;
-    bottom: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 20px;
 }
 
 .word {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     margin-right: 5px; 
 }
 
 .letter {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #333;
+    width: 80px;
+    height: 80px;
+    /* border: 2px solid #333; */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 5px;
-    font-size: 22px;
-    font-weight: 600;
-    border-radius: 4px;
-    box-shadow: -2px 3px #5d5b44;
+    font-size: 25px;
+    font-weight: 500;
+    /* border-radius: 4px; */
+    /* box-shadow: -2px 3px #5d5b44; */
     color: #ffff;
 }
 
 .letter:last-child {
-    margin-right: 0; /* Loại bỏ margin phải cho ô cuối cùng trong mỗi từ */
+    margin-right: 2px; /* Loại bỏ margin phải cho ô cuối cùng trong mỗi từ */
 }
 /* End Letter */
 
