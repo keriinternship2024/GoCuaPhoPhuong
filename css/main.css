@@ -42,9 +42,10 @@ body{
 .header__search {
     display: flex;
     flex: 1 1 0%;
-    height: 60px;
-    width: 414px;
+    height: 48px;
+    width: 335px;
     border-radius: 40px;
+    background-repeat: round;
     /* background-color: #a9c0b2; */
     align-items: center;
     /* border: 2px solid #81806f;
@@ -63,7 +64,7 @@ body{
     color: #58574b;
     padding: 2px 16px;
     border-radius: 20px;
-    margin-top: 5px;
+    margin-top: 2px;
     /* background-color: #a9c0b2; */
 }
 .header__search-select{

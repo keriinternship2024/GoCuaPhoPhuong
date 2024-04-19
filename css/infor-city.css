@@ -155,9 +155,9 @@ header a{
 .arrows{
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 2%;
     z-index: 100;
-    width: 90%;
+    width: 96%;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -175,6 +175,7 @@ header a{
     font-weight: bold;
     transition: .5s;
     font-size: 1.4rem;
+    
 }
 .arrows button:hover{
     background-color: #fff;
