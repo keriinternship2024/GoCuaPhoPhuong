@@ -78,6 +78,14 @@ body {
   font-weight: 500;
   line-height: 1.6;
   margin: 0;
+
+}
+body {
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto; 
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 p {
   font-size: 1.2em;
