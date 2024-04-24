@@ -388,6 +388,13 @@ body{
     animation-timing-function: ease;
     transition: all 0.3s;
 }
+.updown-animation2 {
+    animation-name: updown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all 0.3s;
+}
 
 @keyframes updown {
     0% {
@@ -400,6 +407,8 @@ body{
         transform: translateY(0px);
     }
 }
+
+
 /* End Maker */
 
 /* Start Letter */
@@ -432,6 +441,9 @@ body{
     /* border-radius: 4px; */
     /* box-shadow: -2px 3px #5d5b44; */
     color: #ffff;
+}
+.letter:hover{
+    font-size: 2rem;
 }
 
 .letter:last-child {

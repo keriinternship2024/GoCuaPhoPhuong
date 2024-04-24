@@ -153,31 +153,34 @@
       </div>
       <!-- Maker Start -->
       <div class="maker" id="marker">
-        <div class="box updown-animation" style="top: 340px; left: 750px; position: absolute;">
+        <div  class="box updown-animation" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2" style="top: 340px; left: 750px; position: absolute;">
           <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
           </div> -->
-          <img src="./images/48.png" width="34px" alt="">
+          <img  src="./images/48.png" width="34px" alt="">
         </div>
-        <div class="box updown-animation" style="top: 455px; left: 530px; position: absolute;">
+        <div  class="box updown-animation" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2" class="box updown-animation" style="top: 455px; left: 530px; position: absolute; ">
           <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
           </div> -->
-          <img src="./images/48.png" width="34px" alt="">
+
+
+          <!-- <img id="myImage" src="pic_bulboff.gif" style="width:100px"> -->
+          <img id="myImage" src="./images/48.png" onclick="document.getElementById('myImage').src='./images/49.png'" width="34px" alt="">
         </div>
-        <div class="box updown-animation" style="top: 505px; left: 510px; position: absolute;">
+        <div class="box updown-animation" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2" style="top: 505px; left: 510px; position: absolute;">
           <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
             </div>
           </div> -->
-          <img src="./images/48.png" width="34px" alt="">
+          <img id="myImage1" src="./images/48.png"  width="34px" alt="">
         </div>
-        <div class="box updown-animation" style="top: 600px; left: 650px; position: absolute;">
+        <div class="box updown-animation" type="button"  data-toggle="modal" data-target=".bd-example-modal-lg2" style="top: 600px; left: 650px; position: absolute;">
           <!-- <div class="wrapper">
             <div class="flag">
               <i class="far fa-check-circle" style="font-size: 1.2rem; color: #fff;"></i>
@@ -286,39 +289,39 @@
         </div>
         <div class="offcanvas-body" >
             <ul class="list-service">
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-bed"></i>
                     <div>HOTEL</div>
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-utensils"></i>
                     <div>RESTAURANT</div>
                     
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-clinic-medical"></i>
                     <div>DỊCH VỤ Y TẾ</div>
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-plane"></i>
                     <div>DỊCH VỤ DU LỊCH</div>
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-cocktail"></i>
                     <div>BAR / PUB</div>
                     
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-hot-tub"></i>
                     <div>SPA, MASSAGE</div>
                     
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-taxi"></i>
                     <div>BUS / TAXI </div>
                     
                 </li>
-                <li class="item-service">
+                <li class="item-service" onclick="clickbtn()">
                     <i class="fas fa-shopping-cart"></i>
                     <div>SIÊU THỊ,  </div>
                     <div>TRUNG TÂM THƯƠNG MẠI</div>
@@ -333,7 +336,7 @@
 
 
 
-  <div class="modall  bd-example-modal-lg2" tabindex="-1" role="dialog"aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div onclick="document.getElementById('myImage').src='./images/48.png'" class=" modall  bd-example-modal-lg2" tabindex="-1" role="dialog"aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md" style="top: 10%;">
         <div class="nennau">
           <!-- <div class="modal-header nenxanh">
@@ -360,6 +363,7 @@
         </div>
     </div>
   </div>
+  
   
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -467,6 +471,9 @@ document.addEventListener("DOMContentLoaded", function() {
   var marker = document.getElementById("marker").style.display='none';
      
   }
+  
+
+
 
   function change_place(){
     var place = document.getElementById("change_place").style.display='none';
